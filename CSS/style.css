@@ -9,13 +9,19 @@ ol,
 ul {
   list-style: none;
 }
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  padding: 0;
+}
 a {
   outline: 0;
   text-decoration: none;
   color: #fff;
 }
 body {
-  margin: 0;
   font-family: "Open Sans";
 }
 
@@ -38,4 +44,34 @@ nav {
   margin-right: 7%;
   font-size: 18px;
   color: #fff;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  background-color: #353535;
+}
+.profile img {
+  width: 180px;
+  height: 180px;
+  margin: 20px 0px;
+}
+.context {
+  color: #fff;
+  padding-bottom: 50px;
+}
+.context h4 {
+  margin: 8px 0px;
+}
+.home__contact {
+  box-sizing: content-box;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  color: white;
+}
+.home__contact:hover {
+  color: black;
+  background-color: #fff;
 }
