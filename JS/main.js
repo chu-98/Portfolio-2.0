@@ -1,34 +1,5 @@
+// Dark Mode
 const checkbox = document.querySelector(".checkbox");
-const navbarMenu = document.querySelector(".menu");
-const sectionIds = ["#home", "#about", "#skills"];
-const sections = sectionIds.map(id => document.querySelector(id));
-const navItems = sectionIds.map(id =>
-  document.querySelector(`[data-link="${id}"]`)
-);
-
-let selectedNavIndex = 0;
-let selectedNavItem = navItems[0];
-
-function selectNavItem(selected) {
-  selectNavItem = selected;
-}
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-  selectNavItem(navItems[sectionIds.indexOf(selector)]);
-}
-
-navbarMenu.addEventListener("click", e => {
-  const target = e.target;
-  const link = target.dataset.link;
-  if (link == null) {
-    return;
-  }
-  navbarMenu.classList.remove("open");
-  scrollIntoView(link);
-});
-
 checkbox.addEventListener("click", toggleClick);
 
 console.log(click);
@@ -44,3 +15,17 @@ function click() {
 function toggleClick() {
   document.body.classList.toggle("dark");
 }
+
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector(".menu");
+navbarMenu.addEventListener("click", e => {
+  const link = e.target.dataset.link;
+  if (link == null) {
+    // 아무것도 하지 않는다.
+    return;
+  }
+
+  console.log(e.target.dataset.link);
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+});

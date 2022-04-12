@@ -106,6 +106,7 @@ nav {
   justify-content: space-between;
   background-color: #212121;
   padding: 3% 0%;
+  z-index: 1;
 }
 .logo {
   margin-left: 4%;
@@ -116,9 +117,19 @@ nav {
   margin-left: 25%;
 }
 .menu_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
   margin-right: 20%;
   font-size: 18px;
   color: #fff;
+}
+.menu_item:hover {
+  border-color: var(--color-white);
+  background-color: var(--color-gray);
+  border-radius: var(--size-border-radius);
+  cursor: pointer;
 }
 
 /* Home */
