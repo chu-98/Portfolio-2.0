@@ -57,6 +57,48 @@ a {
 body {
   font-family: "Open Sans";
 }
+body.dark {
+  background-color: #282828;
+  color: #fff;
+}
+.darkmode {
+  width: 10%;
+}
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50px;
+  height: 26px;
+  background-color: black;
+  border-radius: 50px;
+  transform: scale(1.5);
+  position: relative;
+}
+.ball {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease-out;
+}
+.checkbox:checked + .label .ball {
+  /* checked가 된다면 + .label & .ball이 아래 조건을 수행한다 */
+  transform: translateX(24px);
+}
+.checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
 
 /* Header */
 nav {
@@ -71,10 +113,10 @@ nav {
 }
 .menu {
   display: flex;
-  margin-right: 15%;
+  margin-left: 25%;
 }
 .menu_item {
-  margin-right: 10%;
+  margin-right: 20%;
   font-size: 18px;
   color: #fff;
 }
@@ -105,8 +147,10 @@ nav {
   color: white;
 }
 .home__contact:hover {
-  color: black;
   background-color: #fff;
+}
+.home__contact:hover a {
+  color: black;
 }
 
 /* About */
@@ -148,7 +192,7 @@ nav {
 }
 .career__period {
   font-size: 14px;
-  color: #616161;
+  color: #808080;
 }
 .career__name {
   font-size: 16px;
