@@ -75,3 +75,49 @@ nav {
   color: black;
   background-color: #fff;
 }
+
+/* About */
+.about {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.about h1 {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.introduce {
+  margin-top: 12px;
+}
+.introduce p {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.career {
+  margin-right: 7%;
+}
+.timeline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.timeline img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.career__context {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 16px;
+}
+.career__period {
+  font-size: 14px;
+  color: #616161;
+}
+.career__name {
+  font-size: 16px;
+}
