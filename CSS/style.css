@@ -114,7 +114,7 @@ nav {
 }
 .menu {
   display: flex;
-  margin-left: 25%;
+  margin-left: 10%;
 }
 .menu_item {
   display: flex;
@@ -329,6 +329,23 @@ nav {
 .skill__description-name {
   font-size: var(--font-micro);
   font-weight: var(--weight-semi-bold);
+}
+
+/* Contact */
+.contact {
+  margin: 48px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact__title {
+  margin-bottom: 12px;
+}
+.contact__links i {
+  font-size: 60px;
+  color: var(--color-orange);
+  margin: 12px;
 }
 
 /* Arrow-Up */
