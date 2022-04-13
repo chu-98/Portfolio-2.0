@@ -16,6 +16,26 @@ function toggleClick() {
   document.body.classList.toggle("dark");
 }
 
+// Show "Arrow Up" button when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 3) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener("click", () => {
+  console.log("Work?");
+  scrollIntoView("#home");
+});
+
+function scrollIntoView(e) {
+  const scrollTo = document.querySelector(e);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".menu");
 navbarMenu.addEventListener("click", e => {
@@ -26,6 +46,12 @@ navbarMenu.addEventListener("click", e => {
   }
 
   console.log(e.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
+});
+
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector(".home");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
