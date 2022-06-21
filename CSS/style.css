@@ -120,9 +120,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3px;
+  padding: 0.3rem;
   margin-right: 20%;
-  font-size: 18px;
+  font-size: 1rem;
   color: #fff;
 }
 .menu_item:hover {
@@ -138,13 +138,13 @@ nav {
   background-color: #282828;
 }
 .profile img {
-  width: 180px;
-  height: 180px;
-  margin: 20px 0px;
+  width: 12rem;
+  height: 12rem;
+  margin: 4rem 0;
 }
 .context {
   color: #fff;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 .context h4 {
   margin: 8px 0px;
@@ -366,4 +366,25 @@ nav {
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+@media (max-width: 1100px) {
+  .about {
+    display: inline;
+  }
+  .about__introduce {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .career {
+    padding-left: 20rem;
+    padding-bottom: 3rem;
+  }
+  .skills__type {
+    display: block;
+    padding-left: 17rem;
+  }
+  .blockchain {
+    margin: 3rem 0rem;
+  }
 }
